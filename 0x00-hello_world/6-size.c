@@ -1,11 +1,11 @@
 #include<stdio.h>
 
 /**
-  * main - print the size of data types.
-  * Return: Always 0.
+  * main - the containing func
+  * Return: 0 if no error
   */
 int main(void)
-{  
+{
 	printf("Size of char: %d byte(s)\n", sizeof(char));
 	printf("Size of an int: %d byte(s)\n", sizeof(int));
 	printf("size of long int: %d byte(s)\n", sizeof(long));
