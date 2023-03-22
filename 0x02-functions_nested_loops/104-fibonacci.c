@@ -24,7 +24,8 @@ int main(void)
 		b = c;
 		count++;
 	}
-	printf("\n", 98);
+
+	printf("\n");
 	return (0);
 }
 
