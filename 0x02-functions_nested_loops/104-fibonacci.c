@@ -8,18 +8,22 @@
   */
 int main(void)
 {
-	int a = 1, b = 2, c, i;
+	int count = 0, a = 1, b = 2, c;
 
-	printf("%lu, %lu", a, b);
-
-	for (i = 0; i <= 96; i++)
+	printf("%d, %d, ", a, b);
+	count += 2;
+	while (count <= 98)
 	{
 		c = a + b;
-		printf(", %lu", c);
+		printf("%d", c);
+		if (count != 97)
+		{
+			printf(", ");
+		}
 		a = b;
 		b = c;
+		count++;
 	}
-
 	printf("\n");
 	return (0);
 }
