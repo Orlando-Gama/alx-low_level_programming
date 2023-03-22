@@ -8,22 +8,21 @@
   */
 int main(void)
 {
-	int count = 0, a = 1, b = 2, c;
+	int i, j, k;
 
-	printf("%d, %d, ", a, b);
-	count += 2;
-	while (count < 98)
+	i = 1;
+	j = 2;
+
+	printf("%d, %d", i, j);
+
+	for (int n = 3; n <= 98; n++)
 	{
-		c = a + b;
-		printf("%d", c);
-		if (count != 97)
-		{
-			printf(", ");
-		}
-		a = b;
-		b = c;
-		count++;
+		k = i + j;
+		i = j;
+		j = k;
+		printf(", %d", k);
 	}
+
 	printf("\n");
 	return (0);
 }
