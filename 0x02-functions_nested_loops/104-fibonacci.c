@@ -8,19 +8,16 @@
   */
 int main(void)
 {
-	int i, j, k;
+	int a = 1, b = 2, c, i;
 
-	i = 1;
-	j = 2;
+	printf("%lu, %lu", a, b);
 
-	printf("%d, %d", i, j);
-
-	for (int n = 3; n <= 98; n++)
+	for (i = 0; i <= 96; i++)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		printf(", %d", k);
+		c = a + b;
+		printf(", %lu", c);
+		a = b;
+		b = c;
 	}
 
 	printf("\n");
