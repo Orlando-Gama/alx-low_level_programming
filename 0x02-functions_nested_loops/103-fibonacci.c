@@ -1,19 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-using namespace std;
-int sum(int n);
-int fib(int n);
-
-const int N = 4000000;
-
+/**
+  * main - Entry point
+  * Return: Always 0
+  */
 int main(void)
 {
-
-int i = 2;
-
-	cout << sum(i);
-
-	return (0);
+	int a = 1, b = 2, c, sum = 2
+		while (b <= 4000000)
+		{
+			c = a + b;
+			if (c % 2 == 0)
+			{
+				sum += c;
+			}
+			a = b;
+			b = c;
+		}
+		printf("%d\n", sum);
+		return (0);
 }
 
