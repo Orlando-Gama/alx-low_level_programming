@@ -10,14 +10,14 @@
 int main(void)
 {
 	int r, n = 50;
-	long long int a = 1, b = 2, c;
+	long a = 1, b = 2, c;
 
-	printf("%lld, %lld", a, b);
+	printf("%ld, %ld", a, b);
 
-	for (r = 3; r <= n, r++)
+	for (r = 3; r <= n; r++)
 	{
 		c = a + b;
-		printf(", %lld", c);
+		printf(", %ld", c);
 		a = b;
 		b = c;
 	}
