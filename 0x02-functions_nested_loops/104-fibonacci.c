@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%d, %d, ", a, b);
 	count += 2;
-	while (count <= 98)
+	while (count < 98)
 	{
 		c = a + b;
 		printf("%d", c);
@@ -24,7 +24,7 @@ int main(void)
 		b = c;
 		count++;
 	}
-	printf("\n");
+	printf("\n", 98);
 	return (0);
 }
 
