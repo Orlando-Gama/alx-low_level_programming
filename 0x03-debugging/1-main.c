@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int i; // This is an integer variable that will be used as a counter
+	int i; /*This is an integer variable that will be used as a counter*/
 
 	printf("infinite loop incoming :(\n");
 
