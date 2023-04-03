@@ -14,5 +14,6 @@ int main(void)
 
 	t = _strpbrk(s, f);
 	printf("%s\n", t);
+
 	return (0);
 }
