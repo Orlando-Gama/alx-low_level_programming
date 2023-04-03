@@ -4,17 +4,17 @@
   * _strpbrk - Entry point
   * @t: input
   * @accept: input
-  * Retrun: Always 0 (Success)
+  * Return: always 0
   */
 char *_strpbrk(char *t, char *accept)
 {
-	int e;
+	int index;
 
 	while (*t)
 	{
-		for (e = 0; accept[e]; e++)
+		for (index = 0; accept[index]; index++)
 		{
-			if (*t == accept[e])
+			if (*t == accept[index])
 				return (t);
 		}
 		t++;
