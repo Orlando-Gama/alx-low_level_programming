@@ -3,25 +3,26 @@
 
 /**
   * print_diagsums - Entry point
-  * @m: input
-  * @size: input
-  * Return: Always 0 (Success)
+  * @m: The matrix of integers.
+  * @size: The size of the matrix.
+  *
   */
 void print_diagsums(int *m, int size)
 {
-	int sum1, sum2, t;
+	int index, sum1 = 0, sum2 = 0;
 
-	sum1 = 0;
-	sum2 = 0;
+	for (index = 0; index < size; index++)
+	{
+		sum1 += m[index];
+		m += size;
+	}
+	m -= size;
 
-	for (t = 0; t < size; t++)
+	for (index = 0; index < size; index++)
 	{
-		sum1 = sum1 + m[t * size + t];
+		sum2 += m[index];
+		m -= size;
 	}
-	for (t = size - 1; t >= 0; t--)
-	{
-		sum2 += m[t * size + (size - t - 1)];
-	}
-	printf("%d %d\n", sum1, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
 
