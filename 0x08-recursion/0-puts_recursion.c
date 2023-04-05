@@ -3,19 +3,19 @@
 /**
   * _puts_recursion - Prints a string followed by a newline character
   *
-  * @s: Pointer to the string to be printed.
+  * @w: Pointer to the string to be printed.
   *
   * Return: 0
   */
-void _puts_recursion(char *s)
+void _puts_recursion(char *w)
 {
-	if (*s == '\0')
+	if (*w == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
-	_putchar(*s);
-	s++;
-	_puts_recursion(s);
+	_putchar(*w);
+	w++;
+	_puts_recursion(w);
 }
 
