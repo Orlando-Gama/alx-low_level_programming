@@ -9,10 +9,13 @@
   */
 int _pow_recursion(int a, int b)
 {
-	if (a < 0)
+	int result = a;
+
+	if (b < 0)
 		return (-1);
-	if (b == 0)
+	else if (b == 0)
 		return (1);
-	return (a * _pow_recursion(a, b - 1));
+	result *= _pow_recursion(a, b - 1);
+	return (result);
 }
 
