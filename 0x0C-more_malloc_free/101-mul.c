@@ -3,20 +3,20 @@
 #include "main.h"
 
 /**
- * is_digit - checks if a string contains a non-digit char
- * @s: string to be evaluated
- *
- * Return: 0 if a non-digit is found, 1 otherwise
- */
+  * is_digit - checks if a string contains a non-digit char
+  * @s: string to be evaluated
+  *
+  * Return: 0 if a non-digit is found, 1 otherwise
+  */
 int is_digit(char *s)
 {
-	int m = 0;
+	int i = 0;
 
-	while (s[m])
+	while (s[i])
 	{
-		if (s[m] < '0' || s[m] > '9')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
-		m++;
+		i++;
 	}
 	return (1);
 }
