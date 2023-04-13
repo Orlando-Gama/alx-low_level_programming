@@ -3,19 +3,19 @@
 
 /**
   * malloc_checked - allocates memory using malloc
-  * @b: number of bytes to allocates
+  * @q: number of bytes to allocates
   *
   * Return: a pointer to the allocated memory.
   * if malloc fails, status value is equal to 98.
   */
-void *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int q)
 {
-	char *p;
+	char *j;
 
-	p = malloc(b);
+	j = malloc(q);
 
-	if (p == NULL)
+	if (j == NULL)
 		exit(98);
-	return (p);
+	return (j);
 }
 
