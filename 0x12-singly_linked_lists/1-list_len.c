@@ -9,13 +9,12 @@
   */
 size_t list_len(const list_t *h)
 {
-	size_t q = 0;
+	size_t node_count = 0;
 
-	while (h)
+	for (; h != NULL; h = h->next)
 	{
-		q++;
-		h = h->next;
+		node_count++;
 	}
-	return (q);
+	return (node_count);
 }
 
