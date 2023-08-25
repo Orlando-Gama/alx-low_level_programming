@@ -1,31 +1,29 @@
 #include "main.h"
 
 /**
- * _strncat - concatenates n bytes from a string to another
- * @dest: destination string
- * @src: source string
- * @n: number of bytes of str to concatenate
- *
- * Return: a pointer to the resulting string dest
+ * _strncat - fuction will concatenates two strings
+ * @dest: string that will modified.
+ * @src: string that ill be concatenated to @dest.
+ * @n: copy up to poistion 'n'
+ * Return: a pointer to @dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int m, p;
+	int index_01 = 0;
+	int index_02 = 0;
 
-	m = 0;
-	p = 0;
-
-	while (dest[m] != '\0')
-		m++;
-
-	while (src[p] != '\0' && p < n)
+	while (dest[index_01] != '\0')
 	{
-		dest[m] = src[p];
-		m++;
-		p++;
+		index_01++;
 	}
 
-	dest[m] = '\0';
+	while (index_02 < n && src[index_02] != '\0')
+	{
+		dest[index_01 + index_02] = src[index_02];
+		index_02++;
+
+	}
+	dest[index_01 + index_02] = '\0';
 
 	return (dest);
 }

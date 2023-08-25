@@ -1,20 +1,24 @@
 #include "main.h"
 
 /**
-  * _strchr - Entry point
-  * @p: input
-  * @n: input
-  * Return: aleays 0 (success)
-  */
-char *_strchr(char *p, char n)
+ * _strchr - returns a point to first occurance of a char in a string.
+ * @s: string to search for char in.
+ * @c: char to search for.
+ *
+ * Return: pointer to char or else NULL.
+ */
+char *_strchr(char *s, char c)
 {
-	int f = 0;
+	int i;
 
-	for (; p[f] >= '\0'; f++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (p[f] == n)
-			return (&p[f]);
+		if (s[i] == c)
+			return ((s + i));
+		i++;
 	}
-	return (0);
+	if (c == '\0')
+		return ((s + i));
+	return (NULL);
 }
-
